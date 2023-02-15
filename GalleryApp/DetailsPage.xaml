@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="GalleryApp.DetailsPage"
+    Title="Detail">
+
+<StackLayout>
+    <CarouselView x:Name="detailsView"
+                  ItemsSource="{Binding Gallery}"
+                  HorizontalOptions="FillAndExpand"
+                  VerticalOptions="FillAndExpand">
+        <CarouselView.ItemTemplate>
+            <DataTemplate>
+                <StackLayout>
+                    <Image Source="{Binding Source}"
+                           VerticalOptions="FillAndExpand"
+                           Aspect="AspectFit"/>
+                    <Image Source="{Binding FavoriteSource}"
+                           HorizontalOptions="Center"
+                           HeightRequest="100"
+                           Margin="0, 0, 0, 64">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnTappedFavorite"
+                                                  NumberOfTapsRequired="1"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </StackLayout>
+            </DataTemplate>
+        </CarouselView.ItemTemplate>
+    </CarouselView>
+</StackLayout>
+
+</ContentPage>

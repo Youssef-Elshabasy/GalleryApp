@@ -1,0 +1,63 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Resources\" />
+    <None Remove="Resources\Images\" />
+    <None Remove="Resources\Images\Image1.jpg" />
+    <None Remove="Resources\Images\Image10.jpg" />
+    <None Remove="Resources\Images\Image11.jpg" />
+    <None Remove="Resources\Images\Image12.jpg" />
+    <None Remove="Resources\Images\Image13.jpg" />
+    <None Remove="Resources\Images\Image14.jpg" />
+    <None Remove="Resources\Images\Image15.jpg" />
+    <None Remove="Resources\Images\Image2.jpg" />
+    <None Remove="Resources\Images\Image3.jpg" />
+    <None Remove="Resources\Images\Image4.jpg" />
+    <None Remove="Resources\Images\Image5.jpg" />
+    <None Remove="Resources\Images\Image6.jpg" />
+    <None Remove="Resources\Images\Image7.jpg" />
+    <None Remove="Resources\Images\Image8.jpg" />
+    <None Remove="Resources\Images\Image9.jpg" />
+    <None Remove="Resources\Icons\" />
+    <None Remove="Resources\Icons\Favorite.png" />
+    <None Remove="Resources\Icons\Unfavorite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Resources\Images\" />
+    <Folder Include="Resources\Icons\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Images\Image1.jpg" />
+    <EmbeddedResource Include="Resources\Images\Image10.jpg" />
+    <EmbeddedResource Include="Resources\Images\Image11.jpg" />
+    <EmbeddedResource Include="Resources\Images\Image12.jpg" />
+    <EmbeddedResource Include="Resources\Images\Image13.jpg" />
+    <EmbeddedResource Include="Resources\Images\Image14.jpg" />
+    <EmbeddedResource Include="Resources\Images\Image15.jpg" />
+    <EmbeddedResource Include="Resources\Images\Image2.jpg" />
+    <EmbeddedResource Include="Resources\Images\Image3.jpg" />
+    <EmbeddedResource Include="Resources\Images\Image4.jpg" />
+    <EmbeddedResource Include="Resources\Images\Image5.jpg" />
+    <EmbeddedResource Include="Resources\Images\Image6.jpg" />
+    <EmbeddedResource Include="Resources\Images\Image7.jpg" />
+    <EmbeddedResource Include="Resources\Images\Image8.jpg" />
+    <EmbeddedResource Include="Resources\Images\Image9.jpg" />
+    <EmbeddedResource Include="Resources\Icons\Favorite.png" />
+    <EmbeddedResource Include="Resources\Icons\Unfavorite.png" />
+  </ItemGroup>
+</Project>

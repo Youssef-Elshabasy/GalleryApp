@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GalleryApp.GalleryPage"
+             Title="Gallery">
+
+<StackLayout>
+    <CollectionView ItemsSource="{Binding Gallery}"
+                    VerticalOptions="FillAndExpand">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <StackLayout>
+                    <Image x:Name="GalleryImage"
+                           Source="{Binding Source}"
+                           HeightRequest="{Binding Source={x:Reference GalleryImage}, Path=Width}"
+                           Aspect="AspectFill">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnTappedImage" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Image Source="{Binding FavoriteSource}"
+                           HeightRequest="20"/>
+                </StackLayout>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+        <CollectionView.ItemsLayout>
+            <GridItemsLayout HorizontalItemSpacing="5"
+                             VerticalItemSpacing="5"
+                             Orientation="Vertical"
+                             Span="3" />
+        </CollectionView.ItemsLayout>
+    </CollectionView>
+</StackLayout>
+
+</ContentPage>
