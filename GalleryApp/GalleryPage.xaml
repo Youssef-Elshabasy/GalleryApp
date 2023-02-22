@@ -9,18 +9,26 @@
                     VerticalOptions="FillAndExpand">
         <CollectionView.ItemTemplate>
             <DataTemplate>
-                <StackLayout>
+                <Grid>
                     <Image x:Name="GalleryImage"
                            Source="{Binding Source}"
                            HeightRequest="{Binding Source={x:Reference GalleryImage}, Path=Width}"
-                           Aspect="AspectFill">
+                           Aspect="AspectFill"
+                           Grid.Row="0"
+                           Grid.Column="0">
                         <Image.GestureRecognizers>
                             <TapGestureRecognizer Tapped="OnTappedImage" />
                         </Image.GestureRecognizers>
                     </Image>
                     <Image Source="{Binding FavoriteSource}"
-                           HeightRequest="20"/>
-                </StackLayout>
+                           HeightRequest="15"
+                           Grid.Row="0"
+                           Grid.Column="0"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Start"
+                           Margin="5"
+                           Opacity="0.5"/>
+                </Grid>
             </DataTemplate>
         </CollectionView.ItemTemplate>
         <CollectionView.ItemsLayout>
